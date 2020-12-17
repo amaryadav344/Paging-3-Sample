@@ -6,22 +6,18 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.paging.LoadState;
-import androidx.paging.LoadStateAdapter;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.loopwiki.movieground.R;
 import com.loopwiki.movieground.databinding.LoadStateItemBinding;
-
 import org.jetbrains.annotations.NotNull;
 
-public class LoadLoadStateAdapter extends LoadStateAdapter<LoadLoadStateAdapter.LoadStateViewHolder> {
+public class MoviesLoadStateAdapter extends androidx.paging.LoadStateAdapter<MoviesLoadStateAdapter.LoadStateViewHolder> {
     // Define Retry Callback
     private View.OnClickListener mRetryCallback;
 
-    public LoadLoadStateAdapter(View.OnClickListener retryCallback) {
+    public MoviesLoadStateAdapter(View.OnClickListener retryCallback) {
         // Init Retry Callback
         mRetryCallback = retryCallback;
     }
@@ -78,5 +74,4 @@ public class LoadLoadStateAdapter extends LoadStateAdapter<LoadLoadStateAdapter.
                     ? View.VISIBLE : View.GONE);
         }
     }
-
 }
